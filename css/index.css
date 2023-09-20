@@ -23065,7 +23065,7 @@ figcaption {
 }
 
 .ai-hero_logo {
-  grid-column-gap:0.7em;
+  grid-column-gap:0.6em;
   grid-row-gap: 0em;
   flex-direction: row;
   justify-content: flex-start;
