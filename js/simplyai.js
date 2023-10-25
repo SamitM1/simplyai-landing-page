@@ -171,12 +171,13 @@ if (window.innerWidth > 991) {
   }
 
   const phrases = [
-    "ask questions",
-    "take notes",
+    "research any topic faster",
+    "generate human-like text",
     "condense articles",
     "summarize videos",
     "summarize PDFs",
     "summarize images",
+    "craft tailored quizzes",
     "learn anything"
   ];
 

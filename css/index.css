@@ -16363,6 +16363,7 @@ figcaption {
 }
 
 .footer-cta_wrap {
+  height:60%;
   z-index: 500;
   width: 100%;
   grid-column-gap: 2rem;
@@ -16391,7 +16392,7 @@ figcaption {
 }
 
 .footer-cta_logo {
-  width: 3rem;
+
   height: 4rem
 }
 
@@ -38190,7 +38191,7 @@ html.w-mod-js [data-ix=video-initial-appearance] {
   width: 100%;
   min-width: 120%;
   object-fit: cover;
-  margin-bottom: -2.5rem;
+  margin-bottom: -10rem;
   margin-left: -10%
 }
 
