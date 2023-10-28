@@ -23066,7 +23066,7 @@ figcaption {
 }
 
 .ai-hero_logo {
-  grid-column-gap:0.6em;
+  grid-column-gap:0.58em;
   grid-row-gap: 0em;
   flex-direction: row;
   justify-content: flex-start;
@@ -38157,7 +38157,7 @@ html.w-mod-js [data-ix=video-initial-appearance] {
 
 .ai-bento_img {
   object-fit: contain;
-  background-image: url(https://assets-global.website-files.com/62666115cfab458794bd512f/64a6c4500da92d30ef3a291a_wordpres_update_1.webp);
+  background-image: url(../images/previeww.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 110%;
