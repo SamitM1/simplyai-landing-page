@@ -1,7 +1,8 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-family: sans-serif
+  font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23066,7 +23067,7 @@ figcaption {
 }
 
 .ai-hero_logo {
-  grid-column-gap:0.58em;
+  grid-column-gap:0.5em;
   grid-row-gap: 0em;
   flex-direction: row;
   justify-content: flex-start;
