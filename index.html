@@ -29,6 +29,104 @@
   <link href="css/index.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+
+
+
+  <style>
+    /* Popup Container */
+    .discontinued-popup {
+        position: fixed;
+        top: -150px; /* Start hidden above screen */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999999; /* Ensure it's on top of everything */
+        
+        /* Glassmorphism Dark Style */
+        background: rgba(13, 0, 29, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        
+        /* Gradient Border (Top only for style) */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 3px solid transparent;
+        background-image: linear-gradient(rgba(13, 0, 29, 0.9), rgba(13, 0, 29, 0.9)), 
+                          linear-gradient(90deg, #7814f7, #ff4286, #ffbd57);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        
+        border-radius: 12px;
+        padding: 16px 24px;
+        min-width: 320px;
+        max-width: 90%;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        
+        /* Text Styles */
+        font-family: 'Lexend', sans-serif;
+        color: white;
+        text-align: center;
+        
+        /* Animation Logic */
+        opacity: 0;
+        animation: slideDownFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: 2s; /* 2 Second Delay */
+    }
+
+    /* The Animation */
+    @keyframes slideDownFade {
+        0% {
+            top: -150px;
+            opacity: 0;
+        }
+        100% {
+            top: 30px; /* Final Position from top */
+            opacity: 1;
+        }
+    }
+
+    /* Inner Content */
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .popup-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(90deg, #ffbd57, #ff4286);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .popup-msg {
+        font-size: 0.9rem;
+        color: #d0d4da;
+        line-height: 1.4;
+    }
+
+    /* Close Button */
+    .popup-close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: none;
+        border: none;
+        color: #9fa4ab;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+        transition: color 0.2s;
+    }
+    .popup-close:hover {
+        color: white;
+    }
+  </style>
+  
   <script async="" src="https://public.profitwell.com/js/profitwell.js?auth=eaa6fd5d6acb4512d9f6fc0db154f830"></script><script async="" src="https://www.clarity.ms/tag/8bub9fq8g3?ref=gtm2"></script><script type="text/javascript" async="" src="https://cdn.firstpromoter.com/fprom.js"></script><script async="" src="https://public.profitwell.com/js/profitwell.js?auth=eaa6fd5d6acb4512d9f6fc0db154f830"></script><script async="" src="https://www.clarity.ms/tag/8bub9fq8g3?ref=gtm2"></script><script type="text/javascript" async="" src="https://cdn.firstpromoter.com/fprom.js"></script><script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/96163992/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script async="" src="https://public.profitwell.com/js/profitwell.js?auth=eaa6fd5d6acb4512d9f6fc0db154f830"></script>
   <script async="" src="https://www.clarity.ms/tag/8bub9fq8g3?ref=gtm2"></script>
   <script type="text/javascript" async="" src="https://cdn.firstpromoter.com/fprom.js"></script>
@@ -295,6 +393,23 @@
 </head>
 
 <body style="">
+   <div class="discontinued-popup" id="discontinued-popup">
+    <button class="popup-close" onclick="document.getElementById('discontinued-popup').style.display='none'">&times;</button>
+    <div class="popup-content">
+        <div class="popup-title">
+            <!-- Warning Icon SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffbd57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            Product Discontinued
+        </div>
+        <div class="popup-msg">
+            Simply AI is no longer accepting new sign-ups.<br>Thank you for your support.
+        </div>
+    </div>
+  </div>
   <div class="page-wrapper">
     <div class="page-style w-embed">
       <style>
